@@ -54,8 +54,7 @@ class RegistrationManager(models.Manager):
                 user = profile.user
                 user.is_active = True
                 user.save()
-                profile.activation_key = self.model.ACTIVATED
-                profile.save()
+                profile.delete()
                 return user
         return False
     
