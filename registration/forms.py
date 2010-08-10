@@ -30,6 +30,10 @@ class RegistrationForm(UserCreationForm):
     registration backend.
     
     """
+    username = forms.RegexField(label=_("Username"), max_length=30, regex=r'^[\w.@+-]+$',
+        help_text = _("Required. 30 characters or fewer. Letters (without umlaute), digits and @/./+/-/_ only."),
+        error_messages = {'invalid': _("This value may contain only letters, numbers and @/./+/-/_ characters.")})
+    
     email = forms.EmailField(widget=forms.TextInput(
                                 attrs=dict(attrs_dict, maxlength=75)),
                             label=_("Email address"))

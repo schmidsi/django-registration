@@ -1,0 +1,14 @@
+*.pyc
+*~
+.*.swp
+\#*#
+.settings
+.project
+.pydevproject
+.hg
+.tmp*
+*eclipse*
+/secrets.py
+/media/medialibrary
+/media/uploads
+/media/products
